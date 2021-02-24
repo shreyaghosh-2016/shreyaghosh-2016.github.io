@@ -48,9 +48,10 @@
           <div class="col-lg-8">
             <h2 class="portfolio-title">Project Overview</h2>
             <div class="owl-carousel portfolio-details-carousel">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <img src="assets/img/portfolio/portfolio-details-1.jpg" class="img-fluid" alt="">
-              <img src="assets/img/portfolio/portfolio-details-3.jpg" class="img-fluid" alt="">
+              
+              <img src="assets/img/portfolio/portfolio-details-6.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/portfolio-details-7.jpg" class="img-fluid" alt="">
+			  <img src="assets/img/portfolio/portfolio-details-8.jpg" class="img-fluid" alt="">
             </div>
           </div>
 
@@ -58,20 +59,38 @@
             <h3>Project information</h3>
             <ul>
               <li><strong>Category</strong>: Framework Design/ System</li>
-              <li><strong>Project date</strong>: 2016-2018</li>
+              <li><strong>Project date</strong>: 2019-2020</li>
                           </ul>
 
             <p>
-               Location traces on a space-time continumm of any moving agents namely, people, vehicles are termed as  trajectory. ``Human moves with an intent" and capturing the inherent knowledge behind any movement may help to facilitate several location based services or personalized recommendation systems. Therefore, one of the major objective of the work is to perceive the correlations among location, time and mobility behaviours of people. However, analysing huge volume of mobility data is time and compute-intensive. To handle huge amount of data, cloud, fog, edge are the most significant infrastructures to provide delay and energy efficient solution. This work aims to address following research questions:
-<ul>
-<li> How to analyse huge amount of mobility traces and extract usable knowledge to provision better urban-transportation planning and smart living? Whether cloud-fog-edge based paradigm provides effective solution? </li>
-        <li> How to model peoples' movement behaviour to facilitate several context-aware services effectively? 
-    Whether the behavioral differences in the movement patterns of the individuals can be captured and utilized to cluster/ categorize users? </li>
-    <li> How to extract mobility-association rules (inter-sequence and inter-transactional) from trajectory log to summarize interesting movement behavior? </li>
-    <li>Can we map the mobility knowledge of one known region to another unknown (target) region of similar type (say, academic campus) for traffic, point-of-interest (POI)/land-use predictions etc.? </li>
-	</ul>
- The mobility analysis reveals the interconnections, correlations and differences among individuals' movement behaviors and
-their activities by exploring their mobility attributes. However, analyzing huge volume of accumulated trajectory traces is still a challenging task. The major objective of the work is to develop a cloud-based framework to extract informative knowledge from these mobile-trajectories and utilize the information in several  applications.
+            With the huge volume of collected GPS data, another interesting and obvious question arises that whether all the GPS
+points have same information or some of the GPS points
+carry more contextual information than rest. To this end,
+we aim to model and efficiently store user-movement traces
+without losing any significant information. However, instead
+of raw GPS log (time-stamped latitude, longitude data) human movement patterns are better understood when some
+contextual information, landmarks on the route, duration of
+stay points or activities performed at stay points are considered. Motivated by the potential merits, recently research
+trend is to extract semantic information or capturing inherent meaning of these huge volume of human movement
+data. This semantic enrichment of raw GPS log bridges
+the gap between collected GPS traces and various location
+based applications. We aim to capture behavioral differences in the movement patterns of the individuals and utilize the knowledge to cluster users having similar movement
+patterns. The problem becomes quite challenging for the
+unpredictable behavior of human mobility. For example,
+user X and user Y both are students, but may take different
+routes to university. To tackle this challenge, we propose
+Bayesian network for modelling user’s movement pattern
+which captures probabilistic measures of the randomness of
+movement. Although advances in location-acquisition techniques have generated huge amount of GPS data, but unfortunately, scarcity of user-annotated or labelled data is still
+a major challenge in categorization of users. Therefore, we
+aim to learn movement patterns of a known region (source)
+and map the knowledge of the source region to another region (destination) of same domain (say, academic, commercial etc.). This problem of trajectory knowledge transfer has
+not been reported well in the existing literature.
+To address the above mentioned challenges and issues, we
+propose a framework which involves (i) generating user trajectory from raw GPS log (ii) creating User Trace Model to
+represent individuals movement behavior, generating place
+knowledge base of the region from the GPS traces (iii) spatiotemporal movement pattern mining and similarity measurement (iv) transfer the human movement behavior knowledge
+to other geographical place.
             </p>
           </div>
 
