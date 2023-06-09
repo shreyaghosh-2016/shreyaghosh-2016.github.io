@@ -5,6 +5,7 @@
   <title>GeoWildLife 2023</title>
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 </head>
 <body>
@@ -204,7 +205,7 @@
   }
   .spacer {
     height: 4px;
-	
+	}
 	.column {
   float: left;
   width: 50%;
@@ -218,39 +219,96 @@
   display: table;
   clear: both;
 }
+
+@media only screen and (max-width: 990px) {
+  #particles-js{
+  height: 36em;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  #particles-js{
+  height: 38em;
+  }
+}
+
+
+@media only screen and (max-width: 507px) {
+  #particles-js{
+  height: 44em;
+  }
+}
+
+
+@media only screen and (max-width: 365px) {
+  #particles-js{
+  height: 48em;
+  }
+}
+
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
 }
 
 
 </style>
 
 
-<header>
+
+<!--header>
     <div class="header-content">
       <h1>GeoWildLife 2023</h1>
       <p>AI-driven Spatio-temporal Data Analysis for Wildlife Conservation</p>
     </div>
-  </header>
+  </header-->
   
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#cfp">CFP</a></li>
-      <li><a href="#dates">Important Dates</a></li>
-	  <li><a href="#keynote">Keynote Speakers</a></li>
-	  <li><a href="#accepted">Accepted Papers and Schedule</a></li>
-      <li><a href="#organizers">Organizations</a></li>
+  
+<header class="bigheader py-5 mb-5" style="position: relative; background: url('./wild.jpg') no-repeat center center; background-size: cover;">
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.1);"></div>
+    <!-- particles.js container -->
+    <div id="particles-container" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h2 class="headertxt display-5 text-white mt-3 mb-2">1st ACM SIGSPATIAL International Workshop</h2>
+                    <h1 class="headertxt display-4 text-white mt-2 mb-2" style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);">Spatio-temporal Data Analysis for Wildlife Conservation (GeoWildLife 2023).</h1>
+
+                    <h2 class="headertxt display-5 text-white mt-4 mb-2">Nov 13, 2023. Hamburg, Germany.</h2>
+                    <h3 class="headertxt text-white">To be held in <b>31st ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems</b><a href="https://sigspatial2023.sigspatial.org/" target="_blank">&#9808;</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<nav style="background: #333; color: white; padding: 10px 0; text-align: center;">
+    <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;">
+        <li style="margin: 0 15px;"><a href="#about" style="color: white; text-decoration: none;">About</a></li>
+        <li style="margin: 0 15px;"><a href="#cfp" style="color: white; text-decoration: none;">CFP</a></li>
+        <li style="margin: 0 15px;"><a href="#dates" style="color: white; text-decoration: none;">Important Dates</a></li>
+        <li style="margin: 0 15px;"><a href="#keynote" style="color: white; text-decoration: none;">Keynote Speakers</a></li>
+        <li style="margin: 0 15px;"><a href="#accepted" style="color: white; text-decoration: none;">Accepted Papers and Schedule</a></li>
+        <li style="margin: 0 15px;"><a href="#organizers" style="color: white; text-decoration: none;">Organizations</a></li>
     </ul>
-  </nav>
+</nav>
+
+
 
   <main>
-    <section id="about">
-      <div class="section-content">
-        <h2>About the Workshop</h2>
-        <p>The primary objective of this workshop is to advance the state-of-the-art in AI-driven spatio-temporal data analysis for wildlife conservation. By connecting computer scientists, geospatial scientists, ecologists, and conservation practitioners, the workshop seeks to promote interdisciplinary collaboration and drive real-world impact. Through a series of keynote presentations, panel discussions, and interactive sessions, participants will explore various topics including remote sensing technologies, predictive modeling, movement ecology, species distribution modeling, habitat quality assessment, and mitigating human-wildlife conflict. Special focus will be given to ethically and responsibly harnessing AI to ensure the sustainability of conservation efforts.</p>
-		<p> Accepted papers will be included in the workshop proceedings, which will be published in the ACM Digital Library. At least one author of each accepted paper must register for the workshop and present the paper. </p>
-        
-      </div>
-    </section>
+   <section id="about" style="background: #f2f2f2; padding: 30px; border-radius: 15px; margin: 20px;">
+    <div class="section-content">
+        <h2 class="display-4 text-primary">About the Workshop</h2>
+        <p class="lead">The primary objective of this workshop is to advance the state-of-the-art in AI-driven spatio-temporal data analysis for wildlife conservation. By connecting computer scientists, geospatial scientists, ecologists, and conservation practitioners, the workshop seeks to promote interdisciplinary collaboration and drive real-world impact. Through a series of keynote presentations, panel discussions, and interactive sessions, participants will explore various topics including remote sensing technologies, predictive modeling, movement ecology, species distribution modeling, habitat quality assessment, and mitigating human-wildlife conflict. Special focus will be given to ethically and responsibly harnessing AI to ensure the sustainability of conservation efforts.</p>
+        <p class="lead">Accepted papers will be included in the workshop proceedings, which will be published in the ACM Digital Library. At least one author of each accepted paper must register for the workshop and present the paper.</p>
+    </div>
+</section>
+
 
     <section id="cfp">
       <div class="section-content" style="padding: 20px; background: #e6f7ff; border-radius: 10px; margin: 20px;">
@@ -271,34 +329,32 @@
 </div>
     </section>
 
-    <section id="dates">
-      
-	  <div class="section-content" style="padding: 20px; background: #e6f7ff; border-radius: 10px; margin: 20px;">
-  <h2 style="color: #0050b3; font-size: 28px; margin-bottom: 20px;">Important Dates</h2>
-        
-        <ul>
-          <li> Paper submission deadline: July 16, 2023 (AoE) </li>
-<li> Notification of acceptance:   August 30, 2023 </li>
-<li>Camera-ready paper deadline:  September 30, 2023 (AoE)</li>
-<li>Workshop date:  November 13, 2023</li>
-<li> Submission Link: <a href="https://easychair.org/conferences/?conf=geowildlife2023" target="_blank" class="icon">Easychair portal</a></li>
-
+    <section id="dates" style="background: #e6f7ff; padding: 30px; border-radius: 15px; margin: 20px;">
+    <div class="section-content">
+        <h2 class="display-4 text-primary">Important Dates</h2>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Paper submission deadline: July 16, 2023 (AoE)</li>
+            <li class="list-group-item">Notification of acceptance: August 30, 2023</li>
+            <li class="list-group-item">Camera-ready paper deadline: September 30, 2023 (AoE)</li>
+            <li class="list-group-item">Workshop date: November 13, 2023</li>
+			<br>
+            <a href="https://easychair.org/conferences/?conf=geowildlife2023" target="_blank" class="btn btn-primary">Submission Link!</a>
         </ul>
-      </div>
-    </section>
-
-<section id="keynote">
-  <div class="section-content">
-    <h2>Keynote Speakers</h2>
-	Coming soon...
-</div>
+    </div>
 </section>
 
-<section id="accepted">
-  <div class="section-content">
-    <h2>Accepted Papers and Schedule</h2>
-	Will be available here
-</div>
+<section id="keynote" style="background: #f2f2f2; padding: 30px; border-radius: 15px; margin: 20px;">
+    <div class="section-content">
+        <h2 class="display-4 text-primary">Keynote Speakers</h2>
+        <p class="lead">Coming soon...</p>
+    </div>
+</section>
+
+<section id="accepted" style="background: #e6f7ff; padding: 30px; border-radius: 15px; margin: 20px;">
+    <div class="section-content">
+        <h2 class="display-4 text-primary">Accepted Papers and Schedule</h2>
+        <p class="lead">Will be available here</p>
+    </div>
 </section>
 
 
@@ -383,11 +439,101 @@ Research Centre, Frankfurt, Germany</p>
 <!-- And this CSS in your style section -->
 
 
+ 
 
 <footer>
     <p>&copy; 2023 GeoWildLife. All rights reserved.</p>
   </footer>
-
+<script>
+    particlesJS('particles-container',
+        {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff"
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "opacity": {
+                    "value": 0.3,
+                    "random": false,
+                },
+                "size": {
+                    "value": 8,
+                    "random": true,
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 900,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        }
+    );
+</script>
 </body>
 </html>
    
