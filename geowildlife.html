@@ -4,21 +4,242 @@
   <meta charset="UTF-8">
   <title>GeoWildLife 2023</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
-  <header>
+<style>
+  body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #EDEDED;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: #5C6AC4;
+  }
+
+  header {
+    background-color: #5C6AC4;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+  }
+
+  header h1 {
+    font-weight: 700;
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+
+  header p {
+    font-weight: 300;
+    font-size: 1.5em;
+  }
+
+  nav {
+    background-color: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul {
+    list-style: none;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+
+  nav ul li {
+    display: inline;
+    padding: 20px;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  section {
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  section p {
+    font-size: 1em;
+  }
+
+  section img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  form input[type="text"],
+  form input[type="email"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    border-radius: 4px;
+  }
+
+  form input[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5C6AC4;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #333;
+  }
+
+  footer {
+    background-color: #5C6AC4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8em;
+  }
+ .organizer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 40px;
+  }
+  .organizer-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    padding: 20px;
+    text-align: center;
+  }
+
+  
+  
+  .organizer-card img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+  }
+
+  .organizer-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .organizer-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .btn-primary {
+    background-color: #5C6AC4;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: #4A58B0;
+  }
+
+  .btn-primary:active {
+    background-color: #3F4C96;
+  }
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .icon {
+    color: #333;
+    padding: 5px 10px;
+    font-size: 1.5em; /* Adjust the size of the icons */
+    transition: color 0.3s ease;
+  }
+
+  .icon:hover {
+    color: #5C6AC4;
+  }
+  .spacer {
+    height: 4px;
+	
+	.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+}
+
+
+</style>
+
+
+<header>
     <div class="header-content">
       <h1>GeoWildLife 2023</h1>
       <p>AI-driven Spatio-temporal Data Analysis for Wildlife Conservation</p>
     </div>
   </header>
-
+  
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#speakers">Speakers</a></li>
-      <li><a href="#registration">Registration</a></li>
+      <li><a href="#cfp">CFP</a></li>
+      <li><a href="#dates">Important Dates</a></li>
+	  <li><a href="#keynote">Keynote Speakers</a></li>
+	  <li><a href="#accepted">Accepted Papers and Schedule</a></li>
+      <li><a href="#organizers">Organizations</a></li>
     </ul>
   </nav>
 
@@ -27,51 +248,140 @@
       <div class="section-content">
         <h2>About the Workshop</h2>
         <p>The primary objective of this workshop is to advance the state-of-the-art in AI-driven spatio-temporal data analysis for wildlife conservation. By connecting computer scientists, geospatial scientists, ecologists, and conservation practitioners, the workshop seeks to promote interdisciplinary collaboration and drive real-world impact. Through a series of keynote presentations, panel discussions, and interactive sessions, participants will explore various topics including remote sensing technologies, predictive modeling, movement ecology, species distribution modeling, habitat quality assessment, and mitigating human-wildlife conflict. Special focus will be given to ethically and responsibly harnessing AI to ensure the sustainability of conservation efforts.</p>
-        <img src="wildlife.jpg" alt="Wildlife Image">
+        
       </div>
     </section>
 
-    <section id="program">
+    <section id="cfp">
       <div class="section-content">
-        <h2>Program</h2>
+        <h2>Call for Papers</h2>
+        We invite original research contributions, work-in-progress papers, and demos related to the workshop's theme. Topics of interest include but are not limited to:
+Remote Sensing and Wildlife Monitoring: AI interpretation of remote sensing data for tracking animal populations, identifying habitats, and monitoring ecosystem health.
+Predictive Modeling for Conservation: AI-driven models to predict species movements, population changes, and the effects of environmental changes on wildlife.
+Movement Ecology and AI: Using AI to better understand species behavior and movement patterns based on spatial and temporal data.
+Species Distribution Modelling: Applications of AI in predicting and mapping the spatial distribution of different species under changing climate scenarios.
+AI in Habitat Quality Assessment: Employing AI algorithms to analyze and interpret spatial data for evaluating habitat quality and suitability.
+Mitigating Human-Wildlife Conflict: Developing AI tools to predict and prevent conflicts between humans and wildlife, such as crop-raiding by wild animals or human-induced threats to wildlife.
+Conservation Planning and Decision Support Systems: Using AI to aid in spatial planning for conservation, such as identifying priority areas for protection and informing the decision-making processes.
+AI, Ethics, and Wildlife Conservation: Discussions on the ethical implications of using AI in wildlife conservation, including concerns related to privacy, surveillance, and data ownership.
+Socio-Political Implications of AI in Conservation: Understanding the socio-political dimensions of AI-based conservation strategies, including potential impacts on indigenous and local communities.
+AI-driven Citizen Science in Conservation: Leveraging AI to enhance the role of citizen science in wildlife monitoring and conservation efforts.
+
+      </div>
+    </section>
+
+    <section id="dates">
+      <div class="Important Dates">
+        <h2> Important Dates </h2>
         <ul>
-          <li>Time 1: Topic 1</li>
-          <li>Time 2: Topic 2</li>
-          <li>Time 3: Topic 3</li>
+          <li> Paper submission deadline: July 16, 2023 (AoE) </li>
+<li> Notification of acceptance:   August 30, 2023 </li>
+<li>Camera-ready paper deadline:  September 30, 2023 (AoE)</li>
+<li>Workshop date:  November 13, 2023</li>
+
         </ul>
       </div>
     </section>
 
-    <section id="speakers">
-      <div class="section-content">
-        <h2>Speakers</h2>
-        <ul>
-          <li>Speaker 1</li>
-          <li>Speaker 2</li>
-          <li>Speaker 3</li>
-        </ul>
+<section id="keynote">
+  <div class="section-content">
+    <h2>Keynote Speakers</h2>
+	Coming soon...
+</div>
+</section>
+
+<section id="accepted">
+  <div class="section-content">
+    <h2>Accepted Papers and Schedule</h2>
+	Will be available here
+</div>
+</section>
+
+
+<section id="organizers">
+  <div class="section-content">
+    <h2>Organizers</h2>
+    <div class="organizer-grid">
+      <div class="organizer-card">
+        <img src="PM.jpg" alt="Organizer 1">
+        <h3>Prasenjit Mitra</h3>
+        <p>Professor, The Pennsylvania State University, USA and Visiting Professor, Leibniz University, Hannover, Germany </p> <div class="spacer"></div>
+			<div class="icons">
+    <a href="https://scholar.google.co.in/citations?user=8PbgiPkAAAAJ&hl=en&oi=ao" target="_blank" class="icon"><i class="fas fa-graduation-cap"></i></a>
+    <a href="https://ist.psu.edu/directory/pum10" target="_blank" class="icon"><i class="fas fa-globe"></i></a>
+    <a href="mailto:pum10@psu.edu" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
+  </div>
       </div>
-    </section>
-
-    <section id="registration">
-      <div class="section-content">
-        <h2>Registration</h2>
-        <p>To register for the workshop, please fill out the form below:</p>
-        <form>
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required>
-
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-
-          <input type="submit" value="Register">
-        </form>
+      <div class="organizer-card">
+        <img src="BD.jpg" alt="Organizer 2">
+        <h3>Bistra Dilkina</h3>
+        <p>Associate Professor, Computer Science,
+Co-Director, Center for Artificial Intelligence in Society (CAIS),
+University of Southern California, USA</p> <div class="spacer"></div>
+	<div class="icons">
+    <a href="https://scholar.google.co.in/citations?user=1jjyaBYAAAAJ&hl=en&oi=ao" target="_blank" class="icon"><i class="fas fa-graduation-cap"></i></a>
+    <a href="https://viterbi.usc.edu/directory/faculty/Dilkina/Bistra" target="_blank" class="icon"><i class="fas fa-globe"></i></a>
+    <a href="mailto:dilkina@usc.edu" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
+  </div>
       </div>
-    </section>
-  </main>
+      
+     <div class="organizer-card">
+        <img src="TM.jpg" alt="Organizer 4">
+        <h3>Thomas Müller</h3>
+        <p>Professor for Movement Ecology and Biodiversity Conservation, Goethe University and Senckenberg Biodiversity and Climate
+Research Centre, Frankfurt, Germany</p>
+	<div class="icons">
+    <a href="https://scholar.google.co.in/citations?hl=en&user=rM7Oa0kAAAAJ" target="_blank" class="icon"><i class="fas fa-graduation-cap"></i></a>
+    <a href="https://www.senckenberg.de/en/institutes/sbik-f/movement-ecology/team-movement-ecology/" target="_blank" class="icon"><i class="fas fa-globe"></i></a>
+    <a href="mailto:thomas.mueller@senckenberg.de" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
+  </div>
+      </div>
+      <div class="organizer-card">
+        <img src="SG.jpeg" alt="Organizer 4">
+        <h3>Shreya Ghosh</h3>
+        <p>Postdoctoral Scholar <br> The Pennsylvania State University, USA</p> <br>
+		<div class="icons">
+    <a href="https://scholar.google.co.in/citations?user=a5OKo7wAAAAJ&hl=en" target="_blank" class="icon"><i class="fas fa-graduation-cap"></i></a>
+    <a href="https://shreyaghosh-2016.github.io/" target="_blank" class="icon"><i class="fas fa-globe"></i></a>
+    <a href="mailto:shreya@psu.edu" target="_blank" class="icon"><i class="fas fa-envelope"></i></a>
+  </div>
+		
+		      </div>
+    </div>
+	<h2> PROGRAM COMMITTEE </h2> 
+	
+	 
+    <ul>
+      <li> Sanjay Chawla, Research Director of QCRI’s Data Analytics department </li>
+<li> Dan Morris, Research Scientist, Google AI for Nature and Society </li>
+<li> Bing Pan, Professor of Commercial Recreation and Tourism, The Pennsylvania State University </li>
+<li>Lily Xu, Ph.D. Student, Harvard University, USA </li>
+<li> Fei Fang, Assistant Professor of Computer Science at Carnegie Mellon University, Pennsylvania </li>
+<li> Emmanuel Dufourq, AIMS-Canada Junior Research Chair </li>
+<li> Johnson Kinyua, Associate Teaching Professor, College of IST, Pennsylvania State University, USA </li>
+<li> Brendan Derrick Taff, Associate Professor, Recreation, Park, and Tourism Management, The Pennsylvania State University, USA </li>
+<li> Edwin Sabuhoro, Assistant Professor,Recreation, Park, and Tourism Management, The Pennsylvania State University, USA </li>
+<li> Gileard Minja, Mwenge Catholic University Tanzania </li>
+<li> Derek Lee, The Pennsylvania State University, USA </li>
+<li> Andrew Perrault, Assistant Professor, The Ohio State University, USA </li>
+<li> Titus Enock Adhola, Lecturer, University of Nairobi, Kenya </li>
+<li> Randall Boone, Assistant Professor, Colorado State University, USA </li>
+<li> Lorène Jeantet, Postdoctoral Researcher, University of Stellenbosch, African Institute for Mathematical Sciences - AIMS South Africa </li>
+    </ul>
 
-  <footer>
+  
+	 
+  </div>
+</section>
+
+<!-- And this CSS in your style section -->
+
+
+
+<footer>
     <p>&copy; 2023 GeoWildLife. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
+   
